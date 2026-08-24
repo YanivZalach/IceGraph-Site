@@ -6,7 +6,7 @@ Guiding principle: make a technical visitor understand IceGraph quickly, with th
 
 - Vite single-page static frontend.
 - React with strict TypeScript.
-- Tailwind for styling.
+- Plain CSS for styling.
 - Chrome and Edge 100 or newer, Firefox 100 or newer, and Safari 15.4 or newer. Treat newer visual APIs as progressive enhancements.
 - No server rendering, backend, authentication, or persistent state.
 
@@ -48,7 +48,7 @@ A component used once stays near its section. Move it to shared only when two or
 
 ## Styling
 
-- Tailwind only.
+- Plain CSS only. Keep site styles in `src/index.css`.
 - No CSS-in-JS or inline style attributes.
 - Typography establishes hierarchy. Keep the number of competing text scales small.
 - Use a dark, high-contrast developer-tool aesthetic related to the IceGraph app.
