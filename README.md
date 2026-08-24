@@ -2,6 +2,8 @@
 
 The public marketing site for [IceGraph](https://github.com/YanivZalach/IceGraph), an interactive, read-only Apache Iceberg metadata visualizer and debugger.
 
+Marketing site: https://yanivzalach.github.io/IceGraph-Site/
+
 ## Development
 
 Requires Node.js 24.
