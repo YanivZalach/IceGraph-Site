@@ -1,0 +1,50 @@
+{
+  "contentSource": {
+    "repository": "https://github.com/YanivZalach/IceGraph",
+    "commit": "4a3530302a764a5ea737a35e9edb30fb8db6da71"
+  },
+  "captureSource": {
+    "url": "https://yanivzalach.github.io/IceGraph/",
+    "commit": "c85d13c2af040f4904f1acc4821f6e9ac1b505de"
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "artifacts": [
+    {
+      "file": "timeline-hero.webp",
+      "view": "Timeline",
+      "alt": "IceGraph Timeline showing a sequence of Iceberg table operations from initialization through writes and metadata changes"
+    },
+    {
+      "file": "graph-drilldown.webp",
+      "view": "Graph",
+      "alt": "IceGraph Graph view showing Iceberg metadata relationships between snapshots, manifests, data files, and delete files"
+    },
+    {
+      "file": "metadata-view.webp",
+      "view": "Metadata",
+      "alt": "IceGraph Metadata view showing an Iceberg table schema and configuration"
+    },
+    {
+      "file": "file-tree-view.webp",
+      "view": "File Tree",
+      "alt": "IceGraph File Tree view showing Iceberg partitions and files in a hierarchy"
+    },
+    {
+      "file": "product-walkthrough.mp4",
+      "view": "Timeline to Graph",
+      "alt": "Short IceGraph walkthrough selecting an Iceberg table operation in Timeline and continuing into Graph for detailed investigation",
+      "capture": {
+        "tool": "Playwright MCP",
+        "method": "Chromium MediaRecorder",
+        "width": 1920,
+        "height": 1200,
+        "durationSeconds": 15.34,
+        "codec": "H.264",
+        "requestedBitRate": 16000000
+      }
+    }
+  ]
+}
