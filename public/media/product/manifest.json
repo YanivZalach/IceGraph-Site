@@ -1,11 +1,13 @@
 {
   "contentSource": {
     "repository": "https://github.com/YanivZalach/IceGraph",
-    "commit": "4a3530302a764a5ea737a35e9edb30fb8db6da71"
+    "tag": "v0.25.3",
+    "commit": "97858232331d5e8c01f52e1797a5e052f1974057"
   },
   "captureSource": {
     "url": "https://yanivzalach.github.io/IceGraph/",
-    "commit": "c85d13c2af040f4904f1acc4821f6e9ac1b505de"
+    "description": "Hosted IceGraph demo with mock data, deployed from v0.25.3",
+    "capturedAt": "2026-11-21"
   },
   "viewport": {
     "width": 1440,
@@ -15,33 +17,52 @@
     {
       "file": "timeline-hero.webp",
       "view": "Timeline",
-      "alt": "IceGraph Timeline showing a sequence of Iceberg table operations from initialization through writes and metadata changes"
+      "route": "/table/timeline?table=default.events (Data overwritten event selected)",
+      "alt": "IceGraph Timeline listing Iceberg table events with row counts, branch lanes, and an open details panel"
     },
     {
       "file": "graph-drilldown.webp",
       "view": "Graph",
-      "alt": "IceGraph Graph view showing Iceberg metadata relationships between snapshots, manifests, data files, and delete files"
+      "route": "/table/graph opened from the selected Timeline event's View in graph: Snapshot button",
+      "alt": "IceGraph Graph tracing one snapshot from its metadata files through manifests to data files, with a red link marking a deleted file entry"
     },
     {
       "file": "metadata-view.webp",
       "view": "Metadata",
-      "alt": "IceGraph Metadata view showing an Iceberg table schema and configuration"
+      "route": "/table/metadata?table=default.events (scrolled to Schema and Data organization)",
+      "alt": "IceGraph Metadata view showing the table schema, partitioning, and write sort order"
     },
     {
       "file": "file-tree-view.webp",
       "view": "File Tree",
-      "alt": "IceGraph File Tree view showing Iceberg partitions and files in a hierarchy"
+      "route": "/table/filetree?table=default.events (Expand all, partition event_ts_hour = 2025-06-15 11:00 UTC selected, inspector widened and scrolled to the column metrics)",
+      "alt": "IceGraph File Tree with a partition selected and its statistics panel showing file sizes, row and delete counts, and per-column metrics"
+    },
+    {
+      "file": "partition-files-view.webp",
+      "view": "Partition Files",
+      "route": "/partition/graph?table=default.events&p.event_ts_hour=2025-06-15-11 (latest snapshot)",
+      "alt": "IceGraph Partition Files view showing the latest snapshot, its manifests, and the data files of one partition"
+    },
+    {
+      "file": "ai-assistant-view.webp",
+      "view": "AI Assistant",
+      "route": "/table/timeline?table=default.events with Ask AI open",
+      "alt": "IceGraph Ask AI window open over the Timeline, with suggested questions and context chips for choosing which table metadata to send"
     },
     {
       "file": "product-walkthrough.mp4",
       "view": "Timeline to Graph",
-      "alt": "Short IceGraph walkthrough selecting an Iceberg table operation in Timeline and continuing into Graph for detailed investigation",
+      "route": "/table/timeline?table=default.events, select Data overwritten, View in graph: Snapshot",
+      "alt": "Short IceGraph walkthrough selecting an Iceberg table event in Timeline and continuing into Graph for detailed investigation",
       "capture": {
         "tool": "Playwright MCP",
-        "method": "Chromium MediaRecorder",
+        "method": "Playwright JPEG screenshots (quality 95) sampled near 12 fps, drawn to a 1920 by 1200 canvas and encoded with Chromium MediaRecorder (video/mp4;codecs=avc1.42E01E). Graph loading frames are cut so the video moves from the selected Timeline event straight to the settled Graph.",
         "width": 1920,
         "height": 1200,
-        "durationSeconds": 15.34,
+        "targetFrameRate": 30,
+        "measuredAverageFrameRate": 26.78,
+        "durationSeconds": 13.77,
         "codec": "H.264",
         "requestedBitRate": 16000000
       }

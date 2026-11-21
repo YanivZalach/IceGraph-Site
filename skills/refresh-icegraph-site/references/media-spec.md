@@ -26,7 +26,7 @@ Store stable public assets under public/media/product/.
 - timeline-hero.webp: wide Timeline view used above the fold.
 - timeline-overview.webp: Timeline with a meaningful operation selected.
 - graph-drilldown.webp: Graph opened from that Timeline operation.
-- metadata-view.webp: current schema, partition specification, and properties.
+- metadata-view.webp: schema, partition specification, and properties from the newest metadata file in the selected range.
 - file-tree-view.webp: partition and file hierarchy.
 - product-walkthrough.mp4 or product-walkthrough.webm: short Timeline-to-Graph journey when recording is available.
 - product-walkthrough-poster.webp: first meaningful frame for the recording.
