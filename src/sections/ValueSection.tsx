@@ -28,10 +28,7 @@ const ValueSection = () => (
       <article className="value-card value-card-learn">
         <p className="card-index">02 / UNDERSTAND</p>
         <h3>Build the mental model before the incident.</h3>
-        <p>
-          See how Iceberg concepts connect, safely and visually, without
-          decoding raw JSON.
-        </p>
+        <p>See how Iceberg concepts connect, safely and visually.</p>
         <ul>
           <li>High-level Timeline first</li>
           <li>Visual metadata relationships</li>

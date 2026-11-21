@@ -38,10 +38,12 @@ Present the Timeline as the primary orientation view. It explains what happened 
 - IceGraph reads the table's metadata and renders it without changing data or metadata.
 - The Graph view shows the metadata hierarchy from snapshots through manifests to data and delete files, including table branches.
 - The Timeline shows how the table changed commit by commit and identifies operations such as rewrites.
-- The Metadata view shows the current schema, partition specification, and table properties.
-- The File Tree groups partitions and files in a familiar hierarchy.
+- The Metadata view shows the schema, partition specification, and table properties from the newest metadata file in the selected range.
+- The File Tree groups partitions and files in a familiar hierarchy. Selecting a partition or file shows its sizes, row and delete counts, and per-column metrics from the statistics Iceberg already stores.
+- Partition Files lists every data and delete file of one partition at one snapshot (the latest by default), with the manifests that point to them.
+- An optional AI assistant (Ask AI) answers questions about a table using the metadata context the user selects. It is off by default and turns on only when the server is configured with both an OpenAI-compatible API endpoint and a model. The hosted demo shows scripted replies.
 - The Python client and CLI provide scripted access to tables, snapshots, and graph data.
-- IceGraph supports Spark Connect and Iceberg table format version 2.
+- IceGraph supports Spark Connect and Iceberg table format versions 1, 2, and 3.
 - Production deployments should use a read-only Spark Connect identity.
 
 Do not copy internal backend architecture, API polling details, implementation class names, or application state management into marketing content. Verify product claims against the canonical IceGraph repository on GitHub.

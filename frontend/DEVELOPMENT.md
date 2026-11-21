@@ -10,20 +10,22 @@ This frontend is a single-page marketing site for IceGraph. It sends visitors to
 
 1. Hero: a direct product definition, the problem in one line, demo and GitHub calls to action, and a dominant real product visual.
 2. Problem: concise recognition of why snapshots, manifests, delete files, and table evolution are hard to inspect manually.
-3. Product views: Timeline first as the high-level history, Graph second as its drill-down, then Metadata and File Tree as supporting context. Each view is led by a real visual and one question it answers.
+3. Product views: Timeline first as the high-level history, Graph second as its drill-down, then Partition Files as the Graph's current-state workflow (one partition at one snapshot), then the optional AI assistant, then Metadata and File Tree as supporting context. Each view is led by a real visual and one question it answers.
 4. Production safety: read-only behavior and the recommendation to use a read-only Spark Connect identity.
 5. Get started: a one-click-copy Docker command and a path to Python client and CLI documentation.
-6. Scope: Spark Connect only and Iceberg table format version 2.
+6. Scope: Spark Connect only and Iceberg table format versions 1, 2, and 3.
 7. Footer: demo, GitHub, docs, Docker Hub, PyPI, and roadmap links.
 
 ## Product operation to communicate
 
-IceGraph connects to Spark Connect, reads an Iceberg table's metadata for a selected snapshot range, and presents that information through four views:
+IceGraph connects to Spark Connect, reads an Iceberg table's metadata for a selected snapshot range, and presents that information through these views:
 
 - Timeline: high-level table changes and operations in commit order.
 - Graph: a drill-down from a selected Timeline operation into snapshots, manifests, data files, delete files, and branches.
-- Metadata: current schema, partition specification, and properties.
-- File Tree: partitions and files in a hierarchy.
+- Metadata: schema, partition specification, and properties from the newest metadata file in the selected range.
+- File Tree: partitions and files in a hierarchy, with per-partition and per-file statistics.
+- Partition Files: every data and delete file of one partition at one snapshot.
+- AI assistant (optional): questions about the table answered from metadata the user selects.
 
 It never writes data or metadata. Scripted access is available through icegraph-client.
 

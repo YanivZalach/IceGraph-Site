@@ -55,8 +55,7 @@ const HeroSection = () => (
       </h1>
       <p className="hero-description">
         Start with the table timeline. Find the commit that matters. Then drill
-        into snapshots, manifests, data files, and delete files without changing
-        a single byte.
+        down.
       </p>
       <div className="hero-actions">
         <a className="button button-primary" href={LIVE_DEMO_URL}>
@@ -72,6 +71,7 @@ const HeroSection = () => (
         </span>
         <span>Open source</span>
         <span>Spark Connect</span>
+        <span>Ask AI</span>
       </div>
     </div>
     <div className="hero-visual">
@@ -106,7 +106,7 @@ const HeroSection = () => (
         </video>
         <div className="walkthrough-poster">
           <ProductImage
-            alt="IceGraph Timeline showing Iceberg table operations in chronological order"
+            alt="IceGraph Timeline listing Iceberg table events with row counts, branch lanes, and an open details panel"
             filename="timeline-hero.webp"
             isPriority
           />

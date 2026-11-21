@@ -6,25 +6,23 @@ const ScopeSection = () => (
       <p className="section-kicker">OPINIONATED ON PURPOSE</p>
       <h2>Built for a focused job.</h2>
       <p>
-        IceGraph stays simple because its scope is explicit. It connects through
-        Spark Connect and officially supports Iceberg table format version 2.
+        Made for production tables at large scale. IceGraph reads table
+        metadata, not the rows in your data files, so it stays practical on very
+        large tables.
       </p>
     </div>
     <div className="scope-specs">
       <article>
         <span>CONNECTION</span>
         <strong>Spark Connect</strong>
-        <i>Required</i>
       </article>
       <article>
         <span>TABLE FORMAT</span>
-        <strong>Iceberg v2</strong>
-        <i>Official support</i>
+        <strong>Iceberg v1, v2, v3</strong>
       </article>
       <article>
         <span>ACCESS MODE</span>
         <strong>Read-only</strong>
-        <i>By design</i>
       </article>
     </div>
     <a className="button button-primary" href={LIVE_DEMO_URL}>
